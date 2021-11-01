@@ -1,0 +1,265 @@
+html{
+    scroll-behavior: smooth;
+}
+main{
+	padding: 1vw 5vw 10vw 5vw ;
+
+}
+.container {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+.parallax {
+	position: relative;
+	text-align: center;
+	color: white;
+	background-image: url("../imgs/ou.jpg");
+	min-height: 25vw; 
+	background-attachment: fixed;
+	background-position: 50% 75%;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.top-left {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+  }
+h1{
+	font-family: 'Spartan';
+	font-weight: 700;
+	padding-top: 10px;
+	text-align: center;
+	font-size: 6vw;
+}
+h2{
+	font-size: 1.5vw;
+	font-family: 'Montserrat';
+	font-style: italic;
+	text-align: center;
+}
+h3{
+	font-size: 1.75vw;
+	font-family: 'Spartan';
+	text-align: center;
+	padding-bottom: 1vw;
+	font-weight: 600;
+}
+h4{
+	font-size: 1.25vw;
+	font-family: 'Spartan';
+	text-align: center;
+	font-weight: 600;
+}
+.navbar{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: 0px;
+	width: 100%;
+	background-color: none;
+}
+
+.links{
+	display: flex;
+	background-color:none;
+}
+.navlink{
+	padding:10px 2.5vw 10px 2.5vw;
+	border-right:3px solid black;
+}
+.navlink:first-child{
+	border-left:3px solid black;
+}
+  
+.logo{
+	width: 30vw;
+}
+.navlink a{
+	color: black;
+	font-family: 'Spartan';
+	font-weight: 900;
+	text-decoration: none;
+	font-size: 1vw;
+}
+.navlink:hover{
+	background-color: rgba(255,255,255,0.5); 
+}
+#current{
+	background-color: #f1d37b;
+}
+.skip a{
+	background: white;
+	color: black;
+	text-decoration: none;
+	left: 0;
+	padding: 6px;
+	-webkit-transition: top 1s ease-out;
+	transition: top 1s ease-out;
+	z-index: 1;
+	position: absolute;
+	top: -40px;
+  }
+.skip a:focus{
+	position: absolute;
+	top: 0px;
+}
+.dropdown .dropbtn {
+	border: none;
+	outline: none;
+	background-color: inherit;
+	font-family: inherit;
+	font-size: 1vw;
+	font-weight: 900;
+} 
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-content a {
+	float: none;
+	color: black;
+	padding:1vw 1vw;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	font-family: 'Spartan';
+	font-size: 1vw;
+}
+  
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+body{
+	font-family: 'Montserrat';
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    overflow: hidden;
+    font-size: 12px;
+    background-color: black;
+    text-align: center;
+}
+
+.card1, .card2 {
+	width: 20vw;
+	height: 28vw;
+    perspective: 1000px;
+}
+  
+.card-inner, .card-inner2 {
+	width: 20vw;
+	height: 28vw;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+  
+.card-front, .card-front2, .card-back, .card-back2 {
+    position: absolute;
+	width: 20vw;
+	height: 28vw;
+    backface-visibility: hidden;
+}
+
+.card-back, .card-back2 {
+    background-color: #f1d37b;
+    color: black;
+    transform: rotateY(180deg);
+}
+.card-back p, .card-back2 p{
+	text-align: left;
+	padding: .5vw .75vw;
+}
+
+.card1:hover .card-inner,
+.card1:focus-within .card-inner,
+.card2:hover .card-inner2,
+.card2:focus-within .card-inner2 {
+	transform: rotateY(180deg);
+}
+  
+.card-inner, .card-inner2 {
+	width: 20vw;
+	height: 28vw;
+}
+  
+.card-front, .card-front2, .card-back, .card-back2 {
+	width: 20vw;
+	height: 28vw;
+}
+.text{
+	justify-self: center;
+	align-self: center;
+}
+.about-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.card1{
+	grid-column: 1/2;
+}
+.card2{
+	grid-column: 2/3;
+}
+.card1, .card2{
+	grid-row: 1/2;
+	justify-self: center;
+}
+.bottom {
+	position: absolute;
+	bottom: -.10%;
+	left: 0%;
+	width: 100%;
+	background-color: #f1d37b;
+}
+.bottom h4{
+	padding: 2.25vw 0vw;
+	font-size: 1.25vw
+}
+@media all and (min-width: 601px){
+	h1{
+		padding-top: 10px;
+		text-align: center;
+		font-size: 6vw;
+	}
+	.navlink{
+		padding:10px 2.5vw 10px 2.5vw;
+	}
+
+}
+@media all and (min-width: 1025px){
+	h1{
+		padding-top: 10px;
+		text-align: center;
+		font-size: 6vw;
+	}
+	.navbar{
+		/* display: flex;
+		justify-content: center; */
+		width: 100%;
+	}
+	.navlink{
+		padding:10px 2.5vw 10px 2.5vw;
+	}
+
+}
